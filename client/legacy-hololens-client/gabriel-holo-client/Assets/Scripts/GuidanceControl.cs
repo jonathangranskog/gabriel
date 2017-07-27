@@ -207,7 +207,7 @@ namespace gabriel_client
                         _cameraPara.hologramOpacity = 0.9f;
                     else
                         _cameraPara.hologramOpacity = 0.0f;
-                    _photoCaptureObject.StartPhotoModeAsync(_cameraPara, false, OnPhotoModeStartedHOLO);
+                    _photoCaptureObject.StartPhotoModeAsync(_cameraPara, OnPhotoModeStartedHOLO);
                 }
                 else
                 {
@@ -308,7 +308,7 @@ namespace gabriel_client
         {
             //UnityEngine.Debug.Log("++OnPhotoCaptureCreated");
             _photoCaptureObject = captureObject;
-            _photoCaptureObject.StartPhotoModeAsync(_cameraPara, false, OnPhotoModeStarted);
+            _photoCaptureObject.StartPhotoModeAsync(_cameraPara, OnPhotoModeStarted);
         }
 
         void OnPhotoCaptureCreatedHOLO(PhotoCapture captureObject)

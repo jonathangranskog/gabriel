@@ -2,6 +2,7 @@ obj/
 Temp/
 Library/
 UWP/
+App/
 bin/
 *.pdb
 *.dll
@@ -9,3 +10,5 @@ bin/
 *.assets
 *.exe
 *.suo
+*.csproj
+*.sln
