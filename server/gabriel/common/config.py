@@ -54,7 +54,7 @@ class Const(object):
     VERSION = "0.3"
 
     LOG_FILE_PATH = "/var/tmp/cloudlet/log-gabriel"
-    LOG_IMAGES_PATH = "/var/log/gabriel-images"
+    LOG_IMAGES_PATH = "~/gabriel-images"
     LOG_VIDEO_PATH = "/var/log/gabriel-video.avi"
 
     ## port number for the server modules
@@ -102,7 +102,7 @@ class Const(object):
     # backward-compatibility flag
     # if set to true (legacy way), the result will follow previous convention that it is a single json string with result as a value
     # if set to false (default), the result will send header as json, followed by arbitrary data type
-    LEGACY_JSON_ONLY_RESULT = False
+    LEGACY_JSON_ONLY_RESULT = True
 
 
 
@@ -125,5 +125,5 @@ class Debug(object):
     LOG_LEVEL_CONSOLE = logging.INFO
     LOG_STAT = True
     DIRECT_RETURN = False
-    SAVE_IMAGES = False
+    SAVE_IMAGES = True
     SAVE_VIDEO = False

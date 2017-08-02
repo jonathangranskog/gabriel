@@ -334,6 +334,7 @@ class MobileResultHandler(MobileSensorHandler):
             ## send return data to the mobile device
             # packet format: header size, header, data
             # add data size as a field in header for backward compatibility
+
             rtn_header_json[gabriel.Protocol_client.JSON_KEY_DATA_SIZE]=len(rtn_data)
             rtn_header = json.dumps(rtn_header_json)
 
