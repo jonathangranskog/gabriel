@@ -558,7 +558,7 @@ namespace gabriel_client
                     _indexImageFileCompress = (_indexImageFileCompress + 1) % _imageFileCompressLength;
                     compressedTime = GetTimeMillis();
                 }
-                _tokenController.DecreaseToken();
+                //_tokenController.DecreaseToken();
                 _tokenController.LogSentPacket(frameID, dataTime, compressedTime);
                 await StreamImageAsync(imageData, frameID);
             }
@@ -736,7 +736,7 @@ namespace gabriel_client
 
         private async Task StreamImageAsync(byte[] imageData, long frameID)
         {
-//            Debug.WriteLine("streaming image");
+            Debug.WriteLine("streaming image " + frameID);
            
             string headerData = "{\"" + "frame_id" + "\":" + frameID + "}";
             _videoStreamSocketWriter.WriteInt32(checked((int)_videoStreamSocketWriter.MeasureString(headerData)));

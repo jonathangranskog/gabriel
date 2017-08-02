@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,6 +50,7 @@ namespace gabriel_client
 
         public async Task ProcessReceivedPacket(ReceivedPacketInfo receivedPacket)
         {
+            Debug.WriteLine("Process Received Packet");
             long recvFrameID = receivedPacket.frameID;
             string recvEngineID = receivedPacket.engineID;
             SentPacketInfo sentPacket = null;
@@ -73,6 +75,7 @@ namespace gabriel_client
                     increaseCount++;
                 }
             }
+            Debug.WriteLine("Increasing Tokens by " + increaseCount);
             IncreaseTokens(increaseCount);
 
             // deal with the current response
