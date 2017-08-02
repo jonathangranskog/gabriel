@@ -558,7 +558,7 @@ namespace gabriel_client
                     _indexImageFileCompress = (_indexImageFileCompress + 1) % _imageFileCompressLength;
                     compressedTime = GetTimeMillis();
                 }
-                //_tokenController.DecreaseToken();
+                _tokenController.DecreaseToken();
                 _tokenController.LogSentPacket(frameID, dataTime, compressedTime);
                 await StreamImageAsync(imageData, frameID);
             }
